@@ -46,7 +46,7 @@ export default function Login() {
             color: "#111",
           }}
         >
-          Welcome Back
+          Welcome In Expense Tracker App
         </h1>
 
         <p
