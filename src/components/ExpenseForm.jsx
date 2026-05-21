@@ -8,12 +8,11 @@ export default function ExpenseForm() {
 
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
-  const [category, setCategory] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title || !amount || !category) return;
+    if (!title || !amount) return;
 
     dispatch({
       type: "ADD_EXPENSE",
@@ -21,13 +20,11 @@ export default function ExpenseForm() {
         id: Date.now(),
         title,
         amount: Number(amount),
-        category,
       },
     });
 
     setTitle("");
     setAmount("");
-    setCategory("");
   };
 
   return (
@@ -58,20 +55,6 @@ export default function ExpenseForm() {
         placeholder="Amount"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        style={{
-          flex: 1,
-          padding: "14px",
-          borderRadius: "6px",
-          border: "1px solid #ddd",
-          minWidth: "220px",
-        }}
-      />
-
-      <input
-        type="text"
-        placeholder="Category"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
         style={{
           flex: 1,
           padding: "14px",

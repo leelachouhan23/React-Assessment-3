@@ -27,17 +27,7 @@ export default function ExpenseItem({ expense }) {
         >
           {expense.title}
         </h3>
-
-        <p
-          style={{
-            margin: "5px 0 0 0",
-            color: "#666",
-          }}
-        >
-          {expense.category}
-        </p>
       </div>
-
       <div
         style={{
           display: "flex",
